@@ -1,0 +1,23 @@
+<div>
+  <h1>
+    TO-DO LIST
+  </h1>
+
+  <ul>
+    <li *ngFor="let item of items"> 
+      {{item}}<button (click)="removeTarefa(item)">Remover</button>
+      <button (click)="editTarefa(1)">Editar</button>
+      
+    </li>
+  </ul>
+
+  {{tarefa}}
+
+  <input type="text" [(ngModel)]="tarefa"> 
+  <button (click)="addTarefa()">Adicionar</button>
+
+  <div *ngIf="tarefaEmBranco">
+    Por favor, insira uma tarefa antes de adicionar.
+  </div>
+
+</div>
